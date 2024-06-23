@@ -22,8 +22,9 @@ public class LoginPage extends BasePage {
         getWebElement(By.cssSelector("input[value='Log In']")).click();
         return getInstance(AccountOverViewPage.class);
     }
-    public LoginPage clickLoginBtn(String password){
-        getWebElement(By.cssSelector("input[name='password']")).click();
+
+    public LoginPage clickLoginLinkBtn(){
+        getWebElement(By.cssSelector("input[value='Log In']")).click();
         return this;
     }
 
@@ -37,7 +38,8 @@ public class LoginPage extends BasePage {
         return getInstance(RegistrationPage.class);
     }
 
-    public void clickRegistration(){
-
+    public boolean hasError(){
+        return  getWebElements(By.className("error")).size() > 0;
     }
+
 }

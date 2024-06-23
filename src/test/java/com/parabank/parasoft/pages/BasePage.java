@@ -14,7 +14,7 @@ public class BasePage extends Page{
 
     @Override
     public String getPageTitle() {
-        return driver.getTitle();
+        return driver.getTitle().trim();
     }
 
     @Override
