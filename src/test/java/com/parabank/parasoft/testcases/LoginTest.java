@@ -16,7 +16,6 @@ public class LoginTest extends BaseTest {
 
         Assert.assertTrue(loginPage.hasError());
 
-
     }
 
     @Test
